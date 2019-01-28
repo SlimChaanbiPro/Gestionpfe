@@ -84,41 +84,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			//System.out.println(role);
 			List<AccessUrl> accessUrls = authority.getAccessUrls();
 
-		/*	for (AccessUrl accessUrl : accessUrls) {
-				// System.out.println(accessUrl.getGestionUrl().getGetallop());
-				
-				 * http.authorizeRequests().antMatchers(accessUrl.getGestionUrl(
-				 * ).getGetallop()).hasRole("deny");
-				 * http.authorizeRequests().antMatchers(accessUrl.getGestionUrl(
-				 * ).getGetallop()).hasRole("deny");
-				 * http.authorizeRequests().antMatchers(accessUrl.getGestionUrl(
-				 * ).getGetbyidop()) .hasRole("deny");
-				 * http.authorizeRequests().antMatchers(accessUrl.getGestionUrl(
-				 * ).getRemoveop()).hasRole("deny");
-				 * http.authorizeRequests().antMatchers(accessUrl.getGestionUrl(
-				 * ).getUpdateop()).hasRole("deny");
-				 
-
-				if (accessUrl.getAddop()) {
-					http.authorizeRequests().antMatchers(accessUrl.getGestionUrl().getAddop()).hasRole(role);
-				}
-				
-				if (accessUrl.getGetallop()) {
-					http.authorizeRequests().antMatchers(accessUrl.getGestionUrl().getGetallop()).hasRole(role);
-				}
-				
-
-				if (accessUrl.getGetbyidop()) {
-					http.authorizeRequests().antMatchers(accessUrl.getGestionUrl().getGetbyidop()).hasRole(role);
-				}
-				if (accessUrl.getRemoveop()) {
-					http.authorizeRequests().antMatchers(accessUrl.getGestionUrl().getRemoveop()).hasRole(role);
-
-				}
-				if (accessUrl.getUpdateop()) {
-					http.authorizeRequests().antMatchers(accessUrl.getGestionUrl().getUpdateop()).hasRole(role);
-				}
-			}*/
 
 		}
 
@@ -131,17 +96,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.logout().logoutRequestMatcher(new AntPathRequestMatcher("/auth/logout"))
 				.logoutSuccessHandler(logoutSuccess).deleteCookies(TOKEN_COOKIE);
 
-		/*
-		 * http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.
-		 * STATELESS).and().exceptionHandling()
-		 * .authenticationEntryPoint(restAuthenticationEntryPoint).and().
-		 * authorizeRequests() .antMatchers("/api/user/getall").hasRole("Admn");
-		 */
-
-		// http .authorizeRequests()
-		// .antMatchers("api/user/getall").hasRole("USER");
-
-		// disable csrfk
+	
 		http.csrf().disable();
 		http.authorizeRequests().antMatchers("/docApi/swagger-ui.html").permitAll();
 

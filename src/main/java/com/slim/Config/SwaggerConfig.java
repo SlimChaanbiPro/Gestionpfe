@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private static ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Firas gorrab API").description("Firas gorrab API reference for front developers")
-                .termsOfServiceUrl("http://www.dpc.com.tn").contact("https://www.facebook.com/firas.gorrab")
-                .license("Firas gorrab API License").licenseUrl("https://www.facebook.com/firas.gorrab").version("1.0").build();
+                .termsOfServiceUrl("https://www.linkedin.com/in/slim-chaanbi-209470151/").contact("https://www.linkedin.com/in/slim-chaanbi-209470151/")
+                .license("Slim gorrab API License").licenseUrl("https://www.linkedin.com/in/slim-chaanbi-209470151/").version("1.0").build();
     }
 
 }
