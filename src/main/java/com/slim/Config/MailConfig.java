@@ -20,8 +20,8 @@ public class MailConfig {
         mailSender.setPort(587);
         
   
-        mailSender.setUsername("scolarity.dpc@gmail.com");
-        mailSender.setPassword("dpc12345");
+        mailSender.setUsername("your email");
+        mailSender.setPassword("your password");
   
  
         Properties javaMailProperties = new Properties();
